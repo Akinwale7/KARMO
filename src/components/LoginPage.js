@@ -1,7 +1,7 @@
 import React from "react";
 class LoginPage extends React.Component {
   render() {
-    return <h1>Home</h1>;
+    return <div></div>;
   }
 }
 export default LoginPage;
