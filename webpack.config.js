@@ -41,7 +41,7 @@ module.exports = {
       //   use: ["style-loader", "css-loader", "less-loader"]
       // },
       {
-        test: /\.(png|jpg|jpeg|gif|eot|svg|ttf|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2)$/,
         use: [
           {
             loader: "url-loader",
@@ -50,6 +50,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "react-svg-loader",
+          options: {}
+        }
       }
     ]
   },
