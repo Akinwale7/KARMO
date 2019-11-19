@@ -1,0 +1,58 @@
+// Primary
+@B800: #082e48;
+@G500: #47c2b1;
+@B100: #e7eef2;
+@B500: #489fd3;
+
+// Secondary
+@B200: #b8cbd9;
+@B600: #12537f;
+
+// Tertiary
+@B550: #326f94;
+@G550: #32887c;
+@R500: #d75453;
+@Y500: #f19c2d;
+@O500: #f1742d;
+@R550: #973b3a;
+@Y550: #c17d24;
+@O550: #bd561c;
+
+@white: #ffffff;
+@black: #000000;
+
+// Greys
+@K950: #24292d;
+@K900: #494f54;
+@K700: #696f74;
+@K600: #83898e;
+@K500: #9da3a8;
+@K400: #b5bbc0;
+@K300: #ced3d6;
+@K200: #e2e5e7;
+@K150: #edeef0;
+@K100: #f7f8f9;
+@K75: #fafafa;
+@K50: #fdfdfd;
+@K10: #fefefe;
+
+// In/Out Calendar
+@outColour: #d75453;
+@inColour: #47c2b1;
+
+.scrollbar-mixin(@barColor, @background) {
+  /* for firefox */
+  scrollbar-color: @barColor @background;
+  /* for chrome safari */
+  &::-webkit-scrollbar-track {
+    background-color: @background;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: @background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @barColor;
+  }
+}

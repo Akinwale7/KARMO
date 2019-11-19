@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
   mode: "development",
@@ -26,7 +27,13 @@ module.exports = {
             }
           },
           "css-loader?sourceMap",
-          "less-loader?sourceMap"
+          // "less-loader?sourceMap",
+          {
+            loader: "less-loader?sourceMap",
+            options: {
+              paths: [path.resolve(__dirname, "src/less")]
+            }
+          }
         ]
       },
       // {
